@@ -15,17 +15,17 @@
                 containerId: 'root',
                 initiationIcon: 'icon', // Set either 'icon' or 'button'
                 region:"us-west-2", 
-                name: "refer|inputFields|Name", // **** Mandatory**** For chat without form, please add a constant or a variable. Otherwise, if you have a chat form, then you can refer it to the input fields like "refer|inputFields|Name"
-                username: "refer|inputFields|UserName", // **** Mandatory**** For chat without form, please add a constant or a variable. Otherwise, if you have a chat form, then you can refer it to the input fields like "refer|inputFields|UserName"
-                apiGateway: "https://${apiId}.execute-api.${region}.amazonaws.com/Prod", // **** Mandatory Provide the api gateway ARN from installing the async chat cloudformation as explained in the readme document.
-                contactFlowId:'XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXX', // This is the contact flow ID and not the full ARN of that contact Flow, please check README.md for more information.
-                instanceId: 'XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXX', // This is the connect instance ID and not the full ARN of that contact Flow, please check README.md for more information.
-                attachments: true,
+                name: " ", // **** Mandatory**** For chat without form, please add a constant or a variable. Otherwise, if you have a chat form, then you can refer it to the input fields like "refer|inputFields|Name"
+                username: " ", // **** Mandatory**** For chat without form, please add a constant or a variable. Otherwise, if you have a chat form, then you can refer it to the input fields like "refer|inputFields|UserName"
+                apiGateway: "https://d36hrpmtnc.execute-api.us-west-2.amazonaws.com/Prod", // **** Mandatory Provide the api gateway ARN from installing the async chat cloudformation as explained in the readme document.
+                contactFlowId:'ec6c7858-43af-46e9-8113-828a62e9c977', // This is the contact flow ID and not the full ARN of that contact Flow, please check README.md for more information.
+                instanceId: 'cf28222c-d8bb-4175-b7fb-72e7c36259f8', // This is the connect instance ID and not the full ARN of that contact Flow, please check README.md for more information.
+                attachments: false,
                 contactAttr:{
                     SomeContactAttributeKey: "SomeContactAttributeValue",
                 },
                 preChatForm:{
-                    visible: true,
+                    visible: false,
                     inputFields:[
                         {
                             name: "Name",
@@ -40,7 +40,7 @@
                     ]
                 },
                 primaryColor: 'green',
-                description: 'Welcome to Amazon Connect Chat'
+                description: 'Welcome to LA211 Chat'
             })
         </script>
     </body>

@@ -9,4 +9,5 @@ export const Loading = styled.div`
     padding: 50px;
     text-align: center;
     position: absolute;
+    color: #1e4965
 `;

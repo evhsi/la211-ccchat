@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 export const ChatWrapper = styled.div`
     .header-wrapper {
-        background: ${props => props.primaryColor ? props.primaryColor : "#3F5773"};
+        background: ${props => props.primaryColor ? props.primaryColor : "#1e4965"};
         text-align: center;
         padding: 2px;
         color: #fff !important;
