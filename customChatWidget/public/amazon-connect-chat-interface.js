@@ -1,19 +1,4 @@
 /*! For license information please see amazon-connect-chat-interface.js.LICENSE.txt */
-// const { invokeTranslate } = require('./translationHelper');
-// import { GetContactAttributesCommand, ConnectClient } from "@aws-sdk/client-connect";
-
-// const accessKeyId = "AKIAW4FGQBSQZ4KC624E";
-// const secretAccessKey = "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";
-// const connectInstanceId = "cf28222c-d8bb-4175-b7fb-72e7c36259f8";
-// const region = "us-west-2";
-
-// const client = new ConnectClient({
-//   region,
-//   credentials: {
-//     accessKeyId,
-//     secretAccessKey
-//   }
-// })
 
 !(function (e) {
   var t = {};
@@ -33992,7 +33977,7 @@
           (e.lime = "#00FF00"),
           (e.teal = "#008080"),
           (e.aqua = "#00FFFF"),
-          (e.blue = "#0000FF"),
+          (e.blue = "#1e4965"),
           (e.navy = "#000080"),
           (e.black = "#000000"),
           (e.gray = "#808080"),
@@ -43629,8 +43614,6 @@
                 {
                   key: "sendMessage",
                   value: function (e, t, n) {
-                    // const translatedText = await aws.invokeTranslate(t,'','');
-                    // console.log(translatedText);
                     var r = this,
                       i = { Content: t, ContentType: n, ConnectionToken: e },
                       o = r.chatClient.sendMessage(i);
@@ -62682,7 +62665,7 @@
         blush: "#FBEDED",
         tbd: "transparent",
         brown: "#47596E",
-        blue: "#329AD6",
+        blue: "#1e4965",
         darkBlue: "#1067BA",
       },
       ee = {
@@ -63715,22 +63698,6 @@
             (n.content = (function (e) {
               var t = {};
               console.log(e);
-              // console.log(e.ParticipantRole);
-              // e.Content = "peanut";
-              // if(e.ParticipantRole == 'CUSTOMER') {
-              //   invokeTranslate(e.Content, 'auto', 'en');
-              // } else {
-              //   async ()  => {
-              //     const input = {
-              //       InitialContactId: e.Id,
-              //       InstanceId: "cf28222c-d8bb-4175-b7fb-72e7c36259f8"
-              //     }
-              //     const command = new GetContactAttributesCommand(input);
-              //     const output = await client.send(command);
-
-              //     console.log(output);
-              //   }
-              // }
               return (t.data = e.Content), (t.type = e.ContentType), t;
             })(e)),
             (n.displayName = e.DisplayName),
@@ -66183,7 +66150,6 @@
             {
               key: "onIncoming",
               value: function (e) {
-                e.Content = "Tequila";
                 console.log(e);
                 console.log(e.Content);
                 this.on("incoming-message", function () {
@@ -66194,7 +66160,6 @@
             {
               key: "onOutgoing",
               value: function (e) {
-                e.Content = "peanut";
                 console.log(e);
                 console.log(e.Content);
                 this.on("outgoing-message", function () {
