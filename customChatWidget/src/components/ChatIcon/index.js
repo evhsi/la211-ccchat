@@ -59,6 +59,7 @@ const ChatIcon = (props) =>
   useEffect(() => {
     log('useEffect');
       if (toggleIcon) {
+        window.location.reload();
         log('Chat Ended hence toggling back to initial icon(chat)')
         toggleToChatIcon();
         if (chatWithoutForm) setForceUnmountChatWidget(true);

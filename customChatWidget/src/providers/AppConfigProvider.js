@@ -12,12 +12,22 @@ export function useAppConfig(){
     return config;
 }
 
+const createRandom = () => {
+    let result = "";
+    let hexChar = "0123456789abcdef";
+    for (var i = 0; i < 6; i++) {
+    result += hexChar.charAt(Math.floor(Math.random() * hexChar.length));
+    }
+    return result
+}
+
 export const AppConfigProvider = ({ children, config }) => {
     
     const initiationIcon = config.initiationIcon ? config.initiationIcon : chatInitiationIcon.ICON;
     const region = config.region ? config.region : '';
     const name = config.name ? config.name : chatWidgetDefaults.NAME;
-    const username = config.username? config.username : chatWidgetDefaults.USERNAME;
+    // const username = config.username? config.username : chatWidgetDefaults.USERNAME;
+    const username = createRandom();
     const apiGateway = config.apiGateway ? config.apiGateway : '';
     const contactFlowId = config.contactFlowId ? config.contactFlowId : '';
     const instanceId = config.instanceId ? config.instanceId : '';
